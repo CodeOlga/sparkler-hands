@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Бенгальський вогонь + MediaPipe Hands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="app">
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Панель керування -->
+    <div id="ui-panel">
+      <h2>Налаштування фігури</h2>
+
+      <div class="control-row">
+        <label for="shape-select">Фігура:</label>
+        <select id="shape-select">
+          <option value="heart">Серце</option>
+          <option value="flower">Квітка</option>
+          <option value="saturn">Сатурн</option>
+          <option value="buddha">Будда</option>
+          <option value="firework">Феєрверк</option>
+        </select>
+      </div>
+
+      <div class="control-row">
+        <label for="color-input">Колір частинок:</label>
+        <input type="color" id="color-input" value="#ffcc88" />
+      </div>
+
+      <div class="control-row">
+        <span>Масштаб (з руки / мишею):</span>
+        <span id="scale-value">1.0</span>
+      </div>
+
+      <div class="control-row">
+        <label>
+          <input type="checkbox" id="toggle-hands" checked />
+          Використовувати MediaPipe Hands
+        </label>
+      </div>
+
+      <p class="hint">
+        💡 Управління:<br />
+        • pinch (великий + вказівний) — масштаб<br />
+        • рух руки ліворуч/праворуч — обертання по Y<br />
+        • рух руки вгору/вниз — обертання по X<br />
+        • миша/тачпад: натиснути і тягнути для обертання
+      </p>
+    </div>
+
+    <!-- Debug-canvas для ключових точок руки -->
+    <div id="debug-wrapper">
+      <canvas id="debug-canvas"></canvas>
+    </div>
+
+    <!-- Відео з вебкамери (приховане) -->
+    <video id="webcam" autoplay playsinline muted></video>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

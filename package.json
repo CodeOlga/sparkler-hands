@@ -1,0 +1,18 @@
+{
+  "name": "sparkler-hands",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/camera_utils": "^0.3.1675466111"
+  },
+  "devDependencies": {
+    "vite": "4.5.0"
+  }
+}
