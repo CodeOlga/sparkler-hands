@@ -1,7 +1,10 @@
 import "./style.css";
 import * as THREE from "three";
-import { Hands } from "@mediapipe/hands";
-import { Camera as MediaPipeCamera } from "@mediapipe/camera_utils";
+import HandsModule from "@mediapipe/hands";
+import CameraModule from "@mediapipe/camera_utils";
+
+const { Hands } = HandsModule;
+const { Camera: MediaPipeCamera } = CameraModule;
 
 /**
  * ---------------------------------------------------------
